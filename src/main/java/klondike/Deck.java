@@ -2,8 +2,6 @@ package klondike;
 
 import java.util.Stack;
 
-import org.slf4j.impl.StaticLoggerBinder;
-
 public class Deck {
 
 	public static final int NUM_CARDS_PER_SUIT = 12;

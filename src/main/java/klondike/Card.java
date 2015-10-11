@@ -1,7 +1,5 @@
 package klondike;
 
-import javax.swing.text.StyledEditorKit.ForegroundAction;
-
 public class Card {
 	private Suit suit;
 	private int num;

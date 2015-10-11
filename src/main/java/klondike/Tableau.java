@@ -6,6 +6,7 @@ public class Tableau {
 
 	private Deck deck;
 	private Waste waste;
+	private Turn turn;
 	private ArrayList<Foundation> foundations;
 	private ArrayList<TableauPile> tableauPiles;
 	public static final int NUM_MAX_TABLEAU_PILES = 7;
@@ -16,6 +17,9 @@ public class Tableau {
 		this.waste = new Waste();
 		startFoundations();
 		startTableauPiles();
+		while( ! existKlondike()){
+			turn = new Turn(deck,waste,foundations,tableauPiles);
+		}
 	}
 	
 	private void startFoundations(){

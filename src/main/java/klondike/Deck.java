@@ -30,4 +30,15 @@ public class Deck {
 			cards.add(extratedCard);
 		}
 	}
+	
+	public String toString(){
+		String situation = null;
+		if(cards==null){
+			situation = "<vacio>";
+		}
+		else{
+			situation = "[X,X]";
+		}
+		return situation;
+	}
 }

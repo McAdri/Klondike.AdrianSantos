@@ -4,36 +4,35 @@ import java.util.ArrayList;
 
 public class Turn {
 
-	private Deck deck;
-	private Waste waste;
-	private ArrayList<Foundation> foundations;
-	private ArrayList<TableauPile> tableauPiles;
-	
+	private Tableau tableau;
+	private int option;
 	private Coordinate coordinate;
 	
-	public Turn(Deck deck,Waste waste,ArrayList<Foundation> foundations,ArrayList<TableauPile> tableauPiles){
-		this.deck = deck;
-		this.waste = waste;
-		this.foundations = foundations;
-		this.tableauPiles = tableauPiles;
+	public Turn(Tableau tableau){
+		assert tableau != null;
+		
+		this.tableau = tableau;
 		tableauSituation();
 		coordinate = new Coordinate();
 		coordinate.optionsWrite();
+		this.option=coordinate.getOption();
 	}
 	
 	public void tableauSituation(){
-		System.out.println("Baraja: "+deck.toString());
-		System.out.println("Descarte: "+waste.toString());
-		for(int i=0;i<foundations.size();i++){
-			System.out.println(foundations.get(i).toString());;
+		System.out.println("Baraja: "+tableau.getDeck().toString());
+		System.out.println("Descarte: "+tableau.getWaste().toString());
+		for(int i=0;i<tableau.getFoundations().size();i++){
+			System.out.println(tableau.getFoundations().get(i).toString());;
 		}
-		for(int i=0;i<tableauPiles.size();i++){
-			System.out.println(tableauPiles.get(i).toString());
+		for(int i=0;i<tableau.getTableauPiles().size();i++){
+			System.out.println(tableau.getTableauPiles().get(i).toString());
 		}
 		
 		System.out.println("---------------------");
 	}
 	
-	
+	public int getOption(){
+		return option;
+	}
 	
 }

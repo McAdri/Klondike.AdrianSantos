@@ -17,9 +17,6 @@ public class Tableau {
 		this.waste = new Waste();
 		startFoundations();
 		startTableauPiles();
-		while( ! existKlondike()){
-			turn = new Turn(deck,waste,foundations,tableauPiles);
-		}
 	}
 	
 	private void startFoundations(){
@@ -58,5 +55,21 @@ public class Tableau {
 	
 	private boolean emptyTableauPiles(){
 		return tableauPiles.isEmpty();
+	}
+	
+	public Deck getDeck(){
+		return deck;
+	}
+	
+	public Waste getWaste(){
+		return waste;
+	}
+	
+	public ArrayList<Foundation> getFoundations(){
+		return foundations;
+	}
+	
+	public ArrayList<TableauPile> getTableauPiles(){
+		return tableauPiles;
 	}
 }

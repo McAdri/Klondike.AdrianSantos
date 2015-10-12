@@ -45,4 +45,8 @@ public class Deck {
 	public Stack<Card> getCards(){
 		return cards;
 	}
+	
+	public void addCard(Card card){
+		this.cards.add(card);
+	}
 }

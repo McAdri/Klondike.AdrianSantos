@@ -15,4 +15,25 @@ public class Foundation {
 	public String toString(){
 		return "Palo "+this.suit+": "+cards.get(cards.size()).toString();
 	}
+	
+	public Suit getSuit(){
+		return suit;
+	}
+	
+	public int getNumLastCard(){
+		return cards.get(cards.size()-1).getNum();
+	}
+	
+	public void addCard(Card card){
+		this.cards.add(card);
+	}
+	
+	public Card getLastCard(){
+		return cards.get(cards.size()-1);
+	}
+	
+	public void getRemoveCard(){
+		cards.pop();
+	}
+
 }

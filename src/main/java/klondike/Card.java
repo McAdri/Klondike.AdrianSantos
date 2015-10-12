@@ -42,4 +42,16 @@ public class Card {
 	public void setCovered(boolean covered){
 		this.covered = covered;
 	}
+	
+	public Suit getSuit(){
+		return suit;
+	}
+	
+	public int getNum(){
+		return num;
+	}
+	
+	public boolean getCovered(){
+		return covered;
+	}
 }

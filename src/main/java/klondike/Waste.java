@@ -1,6 +1,9 @@
 package klondike;
 
+import java.awt.event.ContainerAdapter;
 import java.util.Stack;
+
+import org.junit.experimental.theories.Theories;
 
 public class Waste {
 
@@ -8,6 +11,10 @@ public class Waste {
 	
 	public Waste(){
 		cards = null;
+	}
+	
+	public void addCard(Card card){
+		this.cards.add(card);
 	}
 	
 	public String toString(){
@@ -21,5 +28,17 @@ public class Waste {
 			}
 		}
 		return situation;
+	}
+	
+	public int getSize(){
+		return cards.size();
+	}
+	
+	public Card getFirstCard(){
+		return this.cards.get(0);
+	}
+	
+	public Card removeCard(){
+		return this.cards.pop();
 	}
 }

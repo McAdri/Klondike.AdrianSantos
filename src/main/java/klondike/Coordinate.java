@@ -4,6 +4,8 @@ package klondike;
 public class Coordinate {
 
 	private int option;
+	private int option2;
+	private int option3;
 	private static final int MAX_OPTIONS = 9;
 	
 	private static final ClosedInterval LIMITS = new ClosedInterval(1,9);
@@ -26,8 +28,56 @@ public class Coordinate {
 		this.option = new LimitedIntDialog(title,MAX_OPTIONS).read();
 	}
 	
-	public void endKlondike(){
-		System.out.println("Adios");
-		System.exit(0);
+	public void optionsWriteWasteToTableauPile(){
+		String title = "¿A que escalera? [1-7]: ";
+		
+		this.option = new LimitedIntDialog(title,7).read();
 	}
+	
+	public void optionsWriteTableauPileToFoundation(){
+		String title = "¿De que escalera? [1-7]: ";
+		
+		this.option = new LimitedIntDialog(title,7).read();
+	}
+	
+	public void optionsWriteTableauPileToTableauPile(){
+		String title = "¿De que escalera? [1-7]: ";
+		
+		this.option = new LimitedIntDialog(title,7).read();
+		
+		title = "¿Cuantas cartas?: ";
+		this.option2 = new LimitedIntDialog(title,7).read();
+		
+		title = "¿A que escalera? [1-7]: ";
+		this.option3 = new LimitedIntDialog(title,7).read();
+	}
+	
+	public void optionsWriteFoundationToTableauPile(){
+		String title = "¿De que palo? [1-4]: ";
+		
+		this.option = new LimitedIntDialog(title,4).read();
+		
+		title = "¿A que escalera? [1-7]: ";
+		
+		this.option = new LimitedIntDialog(title,7).read();
+	}
+	
+	public void optionsFlip(){
+		String title = "¿De que escalera? [1-7]: ";
+		
+		this.option = new LimitedIntDialog(title,7).read();
+	}
+	
+	public int getOption(){
+		return option;
+	}
+	
+	public int getOption2(){
+		return option2;
+	}
+	
+	public int getOption3(){
+		return option3;
+	}
+
 }

@@ -1,6 +1,6 @@
 package klondike;
 
-public class Controller {
+public abstract class Controller {
 
 	protected Tableau tableau;
 	
@@ -9,4 +9,9 @@ public class Controller {
 		this.tableau = tableau;
 	}
 
+	public Tableau getTableau(){
+		return tableau;
+	}
+	
+	public abstract String action();
 }

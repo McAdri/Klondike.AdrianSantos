@@ -1,5 +1,6 @@
 package klondike;
 
+import java.awt.event.ContainerAdapter;
 import java.util.Stack;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
@@ -29,5 +30,21 @@ public class TableauPile {
 	
 	public void setCards(Card card){
 		this.cards.add(card);
+	}
+	
+	public Card getLastCard(){
+		return cards.get(cards.size()-1);
+	}
+	
+	public Card getRemoveCard(){
+		return cards.pop();
+	}
+	
+	public void addCard(Card card){
+		this.cards.add(card);
+	}
+	
+	public Card getCard(int i){
+		return cards.get(i);
 	}
 }

@@ -2,15 +2,17 @@ package klondike;
 
 import java.util.Stack;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 public class TableauPile {
 
 	private int num;
-	private int max_cards_beginning;
+	private int maxCardsBeginning;
 	private Stack<Card> cards;
 	
 	public TableauPile(int num){
 		this.num = num;
-		this.max_cards_beginning = num;
+		this.maxCardsBeginning = num;
 	}
 	
 	public String toString(){
@@ -19,5 +21,13 @@ public class TableauPile {
 			situation.concat(cards.get(i).toString());
 		}
 		return situation;
+	}
+	
+	public int getMaxCardsBeginning(){
+		return maxCardsBeginning;
+	}
+	
+	public void setCards(Card card){
+		this.cards.add(card);
 	}
 }

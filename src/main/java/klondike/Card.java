@@ -8,6 +8,7 @@ public class Card {
 	public Card(Suit suit,int num){
 		this.suit = suit;
 		this.num = num;
+		this.covered = true;
 	}
 	
 	public String toString(){
@@ -36,5 +37,9 @@ public class Card {
 			num = "K";
 		}
 		return num;
+	}
+	
+	public void setCovered(boolean covered){
+		this.covered = covered;
 	}
 }

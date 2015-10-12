@@ -41,4 +41,8 @@ public class Deck {
 		}
 		return situation;
 	}
+	
+	public Stack<Card> getCards(){
+		return cards;
+	}
 }

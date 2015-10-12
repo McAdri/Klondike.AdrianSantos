@@ -32,6 +32,16 @@ public class Tableau {
 		for(int i = 1; i <=NUM_MAX_TABLEAU_PILES; i++){
 			tableauPiles.add(new TableauPile(i));
 		}
+		for(int i = 1; i <=tableauPiles.size(); i++){
+			for(int j=0;j<tableauPiles.get(i).getMaxCardsBeginning();j++){
+				Card card = deck.getCards().pop();
+				if(j+1 == tableauPiles.get(i).getMaxCardsBeginning()){
+					card.setCovered(true);
+				}
+				tableauPiles.get(i).setCards(card);
+				
+			}
+		}
 	}
 	
 	public boolean existKlondike(){
